@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+    <script src="./index.js"></script>
+    <style>
+        div {
+            height: 33px;
+        }
+
+        .back {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            background: #ccc;
+            display: none;
+            opacity: 0.7;
+        }
+
+        .dialog {
+            display: none;
+            width: 522px;
+            height: 370px;
+            background: #ffffff;
+            float: left;
+            top: 25px;
+            z-index: 12;
+            position: absolute;
+            left: 33%;
+
+        }
+
+        .content1 {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .dialog-header {
+            background: blue;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 0;
+            height: 33px;
+            background: blue;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="clickHeader()" style="background: #ccc">click</button>
+    <!-- <div class="header" onclick="clickHeader()" style="background: #ccc"></div>
+    <div class="content" style="background: rgb(167, 207, 163)"></div>
+    <div class="footer" style="background: rgb(46, 25, 141)"></div> -->
+    <div class="back"></div>
+    <div class="dialog">
+        <div class="content1">
+            <div class="dialog-header">
+                <h3 style="text-align: center;margin-top: 0;    color: white;
+                line-height: 33px;">information</h3>
+            </div>
+            <div class="content"></div>
+            <div class="footer">
+                <button style="float: right;line-height: 18px;margin-top: 5px;margin-right: 15px;" onclick="closeDialog()">close</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<!-- <body>
+        <div>广告内容</div>
+        <div id="siteTable"></div>
+        <div>广告内容</div>
+        <script>
+        var website = [
+            {"site":"逐浪小说","url":"http://www.zhulang.com"},
+            {"site":"起点小说","url":"http://www.qidian.com"},
+            {"site":"起点小说","url":"http://www.qidian.com"},
+            {"site":"起点小说","url":"http://www.qidian.com"},
+            {"site":"起点小说","url":"http://www.qidian.com"},
+            {"site":"起点小说","url":"http://www.qidian.com"},
+            {"site":"起点小说","url":"http://www.qidian.com"},
+            {"site":"起点小说","url":"http://www.qidian.com"},
+            {"site":"起点小说","url":"http://www.qidian.com"}
+        ]; 
+        var col = 5;//表格列数
+        var td = website.length%col==0?website.length:Math.ceil(website.length/col)*col;
+        var _i = 0;
+        var html ="<table><tr>";
+        for(var i=0;i<td;i++){
+            if(website[i]){
+                html += '<td><a href="'+website[i].url+'">'+website[i].site+'</a></td>';
+            }else{
+                html += '<td></td>';
+            }
+            if((i+1)%col==0 && i>0){
+                html+="</tr><tr>";
+            }
+        }
+        html +="</tr></table>"
+        document.getElementById('siteTable').innerHTML = html;
+        </script>
+    </body> -->
